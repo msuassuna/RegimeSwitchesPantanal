@@ -35,7 +35,7 @@ library(cowplot)
 library(ggpubr)
 library(diagram)
 library(zoo) # Windowed standard deviation
-library(ggplot2);cat('\014')
+cat('\014')
 
 # Load used functions
 source("scripts/select_data.R")
@@ -56,16 +56,8 @@ sites <- dir("data/HidroWeb")
 
 # Add the metadata
 # Read the ANA inventory of the Brazilian stream gauges
-# Metadata is saved as a .mdb file and requires RODBC package to read
-arquivo <- RODBC::odbcConnectAccess2007("data/hidroWebMetaData/HIDRO.mdb")
-streamGauges <- RODBC::sqlFetch(arquivo,"Estacao",as.is=TRUE)
-streamGauges <- streamGauges %>%
-  dplyr::select("Codigo", "Nome","Latitude","Longitude","Altitude","AreaDrenagem", "RioCodigo", "EstadoCodigo") %>%
-  filter(Codigo %in% sites) %>%
-  arrange(Codigo) %>%
-  dplyr::select(Codigo, Nome, Latitude, Longitude, Altitude, AreaDrenagem)
-rm(arquivo)
-
+streamGauges <- read_csv2("data/streamGauges.txt",
+                          locale = readr::locale(encoding = "latin1"))
 names(streamGauges) <- c("Site", "Name", "lat", "lon", "elevation", "DA")
 streamGauges <- streamGauges %>%
   arrange(factor(Site, levels = sites))
@@ -105,7 +97,7 @@ for(i in 1:length(sites)){
               type = "l", col = "grey", bty = "n",
               main = paste("Daily flows at",
                            streamGauges$Name[i], "stream gauge"),
-              xlab = "Year", ylab = "Discharge (m³/s)",
+              xlab = "Year", ylab = "Discharge (m3/s)",
               xlim = c(as.Date("1900-01-01"),as.Date("2021-01-01"))))
     
     # Summarizes annual minima data
@@ -270,7 +262,7 @@ ggplot(df, aes(x = hydroYear, y = Minima)) +
 siteN <- ddply(df,.(Site), summarise, N=length(Site))
 streamGauges <- merge(streamGauges, siteN, by = "Site")
 
-sum(streamGauges$N.y)
+sum(streamGauges$N)
 # 1373 minimum flows in the study area
 
 # Convert the data from long to wide
@@ -323,6 +315,7 @@ for(i in 1:5){
 
 CompareFits <- data.frame("Classes" = c(1:5),
                           "BIC" = BIC_Obs)
+
 CompareFits <- CompareFits %>%
   pivot_longer(!Classes,
                names_to = "InfoCriteria", values_to = "Value")
@@ -412,6 +405,7 @@ TestNormality <- df_wide %>%
 
 ggqqplot(TestNormality$Residual)
 shapiro.test(TestNormality$Residual)
+# Residuals looks normally distributed
 
 # Plot Ladário stream gauge
 Paleta <- c(rgb(0.2,0.2,0.8,0.8),
@@ -431,10 +425,10 @@ prstates_valores[prstates_valores == 4] <- as.numeric(Medias[Medias$class == 4,2
 
 png(paste0("plots/LadarioRegimes.png"),
     height = 500 * 5, width = 800 * 5, res = 75 * 5)
-par(mar = c(4.5,4.5,3.5,7))
+par(mar = c(4.5,4.5,3.5,7), oma = c(0,0,0,0))
 plot(df_wide$hydroYear, df_wide$`66825000`, type = "l", bty = "n", col = "grey",
      xlab = "Year", ylab = "Water level (cm)",
-     main = "Annual minimum water levels at Ladário stream gauge")
+     main = "Annual minimum water levels at Ladario stream gauge")
 
 abline(h = seq(-100,400,100), col = "grey", lty = 2)
 abline(v = seq(1900,2020,20), col = "grey", lty = 2)
@@ -464,6 +458,7 @@ lines(A, dnorm(A, Medias$Medias[2],
                Medias$Sd[2]), type = "l", col = 2)
 lines(A, dnorm(A, Medias$Medias[3],
                Medias$Sd[3]), type = "l", col = 3)
+
 Q <- A
 fixDistLad <- function(Q){
   D <- sum(prstates_total == 1)/length(prstates_total) *
@@ -489,7 +484,7 @@ for(i in 1:length(sites)){
     p <- ggplot(df2 %>% filter(Site == sites[i]),
                 aes(x = as.factor(class), y = Minima, fill = as.factor(class))) +
       geom_violin() + theme_bw() +
-      ylab("Discharge (m³/s)") + xlab("Drought classes") +
+      ylab("Discharge (m3/s)") + xlab("Drought classes") +
       ggtitle("Violin plots of annual minimum flows",
               subtitle = paste(streamGauges$Name[i], "stream gauge")) +
       scale_fill_discrete(name = "Drought class")
@@ -515,6 +510,7 @@ for(i in 1:length(sites)){
     dev.off()
   }
 }
+
 
 # Evaluate if differences between classes are meaningful
 Estimates <- list()
@@ -557,6 +553,7 @@ png(paste0("plots/Regimes.png"),
 print(p)
 dev.off()
 
+# Classify drought regimes according to regional patterns
 streamGauges$Regimes2 <- ifelse(streamGauges$Site %in% c("66460000","6470000","66710000",
                        "66260001","66270000","66340000",
                        "66900000","66910000","66945000"),
@@ -567,7 +564,7 @@ write.csv(streamGauges, "outputTables/streamGauges.txt", row.names=FALSE)
 ########################################################################
 ########################################################################
 ##
-## 3: Evaluate Markov Chains
+## 3: Evaluate hidden states of Markov Chains
 ##
 ########################################################################
 ########################################################################
@@ -947,10 +944,10 @@ plot(STL_Rain$time.series[,3])
 WindowedSD <- rollapply(data = STL_Rain$time.series[,3], width=24, FUN=sd)
 
 png(paste0("plots/RainfallComparison.png"),
-    height = 500 * 3, width = 800 * 6, res = 75 * 5)
+    height = 500 * 3 * 2, width = 800 * 6 * 2, res = 75 * 5 * 2)
 par(mfrow = c(1,2),
     mar = c(4.5,4.5,2.5,1),
-    oma = c(0,0,0,0))
+    oma = c(2,0,0,0))
 with(Compara,
      plot(Rain_GPCC, Rain_CHIRPS, pch = 20, bty = "n", col = Paleta[Season],
           xlab = "Precipitation with GPCC (mm)",
@@ -976,6 +973,9 @@ legend("bottomright", bty = "n",
        lty = 1,
        lwd = c(1,3),
        col = c(1,2))
+
+mtext('(a)',at=0.3, side=1,outer=T,cex=1.2)
+mtext('(b)',at=0.8, side=1,outer=T,cex=1.2) 
 
 
 dev.off()
