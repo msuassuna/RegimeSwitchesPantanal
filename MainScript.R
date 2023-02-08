@@ -453,7 +453,8 @@ dev.off()
 # Plot mixed distribution
 A <- c(-100: 300)
 plot(A, dnorm(A, Medias$Medias[1], Medias$Sd[1]),
-     type = "l", bty = "n", ylim = c(0,0.015))
+     type = "l", bty = "n", ylim = c(0,0.015),
+     ylab = "Density")
 lines(A, dnorm(A, Medias$Medias[2],
                Medias$Sd[2]), type = "l", col = 2)
 lines(A, dnorm(A, Medias$Medias[3],
@@ -470,7 +471,12 @@ fixDistLad <- function(Q){
   return(D)
 }
 
-lines(A, fixDistLad(A), type = "l", col = 4)
+Dlad <- density(df_wide$`66825000`)
+polygon(c(Dlad$x, rev(Dlad$x)),
+        c(Dlad$y, rep(0, length(Dlad$x))),
+        col = rgb(0.5,0.5,0.5,0.5), border = "white")
+lines(A, fixDistLad(A), type = "l", col = 4, lwd = 3)
+
 
 # Violin plots of annual minima separated by drought class
 df_prstates_total <- data.frame(hydroYear = df_wide$hydroYear,class = prstates_total)
