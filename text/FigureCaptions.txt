@@ -1,0 +1,17 @@
+Figure 1: The top right image shows the location of the upper Paraguay river in the middle of South America. The larger figure displays the river catchment in detail. The stream gauges are indicated with colours according to the time series length. The sub-catchments and other graphical elements are indicated in the legend. The daily water levels are displayed on the map. The time series plots indicate daily water levels along with annual minimum water levels with darker lines and points.
+
+Figure 2: Evaluation of the GPCC precipitation data. GPCC was used to extend CHIRPS precipitation data set. In the first graphic, a scatter plot was built to check for biases. In the second plot, the evolution of the standard deviation was plot with a loess fit.
+
+Figure 3: Annual minimum water levels time series at the Ladário stream gauge. The mean and standard deviation of each water level regime are displayed – the plot on the top right side of the figure shows the Bayesian Information Criterion change with the increase of drought regimes. It shows an elbow when 3 drought regimes are considered.
+
+Figure 4: Violin plots of annual minimum water levels considering the HMM model with three drought regimes. In the stream gauges marked with *, the water level regimes do not follow the regional pattern. In those sites, fewer flow regimes are observed, or they do not follow the same regional pattern of drought magnitudes (class 1 with more severe, class 2 with the intermediate and 3 with the least severe droughts).
+
+Figure 5: Spatial pattern of mean water levels during the different drought regimes. The main channel of the Paraguay river determines the regional pattern, where the Ladário stream gauge is located (highlighted in red). The Cuiabá river sub-basin in the north-eastern part of the catchment does not follow the regional pattern. In the south-eastern region, the Miranda river differs from the region because there is no significant difference in drought magnitudes between classes, although they reflect a similar pattern.
+
+Figure 6: Transition matrices in different periods in the Paraguay river basin. Different transition matrices were estimated for different periods: total length (1900-2021), first (1900-1960) and the second half (1961-2021) of the time series.
+
+Figure 7: Histograms of the number of years of extreme droughts in a period of 46 years. Time series were simulated using the estimated drought transition matrices. This length is the same of the 1974-2019 period. In the observed regional time series of drought classes, no extreme drought was observed during this period.
+
+Figure 8: (a) Density kernels of annual cumulative precipitation in different drought classes; (b) violin plots of the annual cumulative average precipitation in different drought classes. Rainfall data from January 1940 to January 1981 were estimated using GPCC. Data from 1981 onwards were estimated using CHIRPS
+
+Table 1: Transition matrix and 95% confidence level of the lower and upper endpoint matrices, estimated using bootstrap. Different transition matrices were estimated for different periods: total length (1900-2021), first (1900-1960) and the second half (1961-2021) of the time series.
