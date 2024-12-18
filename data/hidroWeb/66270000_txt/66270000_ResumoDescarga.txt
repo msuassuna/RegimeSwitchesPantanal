@@ -1,0 +1,20 @@
+Agência Nacional de Águas - ANA
+Superintendência de Gestão da Rede Hidrometeorológica-SGH
+Sistema de Informações Hidrológicas - Versão WEB
+Fone: (61) 2109-5242
+E-mail: hidro@ana.gov.br
+
+NivelConsistencia: 1 = Bruto, 2 = Consistido
+MedidorVazao: 1 = ADCP (outros modelos), 2 = ADCP RiverPro de 1200 kHz, 3 = ADCP RiverPro de 600 kHz, 4 = ADCP RiverRay de 600 kHz, 5 = ADCP StreamPro, 6 = ADCP Workhorse Rio Grande de 1200 kHz, 7 = ADCP Workhorse Rio Grande de 300 kHz,
+8 = ADCP Workhorse Rio Grande de 600 kHz, 9 = Barco em movimento (moving boat ou smoot), 10 = FlowTracker;11 = Flutuador, 12 = MF Pro;13 = Micromolinete, 14 = Molinete de eixo horizontal, 15 = Molinete de eixo vertical,
+16 = RiverSurveyor = M9, 17 = RiverSurveyor = S5, 18 = Volumétrico, 19 = Outros, 20 = Não especificado
+
+Restrições da consulta:
+Código da Estação:66270000
+
+
+EstacaoCodigo;NivelConsistencia;Data;Hora;NumMedicao;Cota;Vazao;AreaMolhada;Largura;VelMedia;Profundidade;tecnico;medidorvazao
+66270000;1;27/11/2023;01/01/1900 11:24;4;"283,0";"176,588";"390,466";"178,292";"0,452";"2,19";Indimar/Placidio;16
+66270000;1;27/09/2023;01/01/1900 10:05;3;"269,0";"157,468";"371,48";"174,427";"0,424";"2,129";Indimar/Verçon;16
+66270000;1;05/05/2023;01/01/1900 11:46;2;"330,0";"240,971";"441,703";"203,701";"0,546";"2,168";Elessandro;16
+66270000;1;28/03/2023;01/01/1900 11:37;1;"525,0";"548,133";"821,997";"192,821";"0,667";"4,26";Indimar/Warley;16

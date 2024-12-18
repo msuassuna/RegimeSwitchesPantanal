@@ -1,0 +1,24 @@
+Agência Nacional de Águas - ANA
+Superintendência de Gestão da Rede Hidrometeorológica-SGH
+Sistema de Informações Hidrológicas - Versão WEB
+Fone: (61) 2109-5242
+E-mail: hidro@ana.gov.br
+
+NivelConsistencia: 1 = Bruto, 2 = Consistido
+TipoCurva: 1 = Equação, 2 = Tabela
+TipoEquacao: 1 = Potência (Q(H) = a(H - h0)^n), 2 = Linear (Q(H) = a0 + a1H), 3 = Parabólica (Q(H) = a0 + a1H + a2H^2), 4 = Cúbica (Q(H) = a0 + a1H + a2H^2 + a3H^3)
+
+Restrições da consulta:
+Código da Estação:66120000
+
+
+EstacaoCodigo;NivelConsistencia;PeriodoValidadeInicio;PeriodoValidadeFim;CotaMaxima;CotaMinima;TipoCurva;NumeroCurva;TipoEquacao;CoefA;CoefH0;CoefN;CoefA0;CoefA1;CoefA2;CoefA3;TabelaPassoCota;TabelaVazao
+66120000;2;01/12/1967;14/08/2012;"382,0";"200,0";1;01/03;1;"0,611";"-4,48";"2,98";;;;;"1,0";
+66120000;2;01/12/1967;14/08/2012;"486,0";"382,0";1;02/03;1;"1,3101";"-2,53";"3,0";;;;;"1,0";
+66120000;2;01/12/1967;14/08/2012;"600,0";"486,0";1;03/03;1;"143,8737";"2,6";"1,6";;;;;"1,0";
+66120000;2;15/08/2012;31/12/2021;"367,0";"170,0";1;01/03;1;"0,4249";"-4,83";"3,0";;;;;"1,0";
+66120000;2;15/08/2012;31/12/2021;"483,0";"367,0";1;02/03;1;"5,8176";"-0,91";"2,5";;;;;"1,0";
+66120000;2;15/08/2012;31/12/2021;"600,0";"483,0";1;03/03;1;"25,9545";"1,67";"2,5";;;;;"1,0";
+66120000;1;01/01/2022;31/12/2024;"367,0";"100,0";1;01/03;1;"0,4249";"-4,83";"3,0";;;;;"1,0";
+66120000;1;01/01/2022;31/12/2024;"483,0";"367,0";1;02/03;1;"5,8176";"-0,91";"2,5";;;;;"1,0";
+66120000;1;01/01/2022;31/12/2024;"600,0";"483,0";1;03/03;1;"25,9545";"1,67";"2,5";;;;;"1,0";

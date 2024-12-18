@@ -1,0 +1,17 @@
+Agência Nacional de Águas - ANA
+Superintendência de Gestão da Rede Hidrometeorológica-SGH
+Sistema de Informações Hidrológicas - Versão WEB
+Fone: (61) 2109-5242
+E-mail: hidro@ana.gov.br
+
+NivelConsistencia: 1 = Bruto, 2 = Consistido
+TipoCurva: 1 = Equação, 2 = Tabela
+TipoEquacao: 1 = Potência (Q(H) = a(H - h0)^n), 2 = Linear (Q(H) = a0 + a1H), 3 = Parabólica (Q(H) = a0 + a1H + a2H^2), 4 = Cúbica (Q(H) = a0 + a1H + a2H^2 + a3H^3)
+
+Restrições da consulta:
+Código da Estação:67030000
+
+
+EstacaoCodigo;NivelConsistencia;PeriodoValidadeInicio;PeriodoValidadeFim;CotaMaxima;CotaMinima;TipoCurva;NumeroCurva;TipoEquacao;CoefA;CoefH0;CoefN;CoefA0;CoefA1;CoefA2;CoefA3;TabelaPassoCota;TabelaVazao
+67030000;2;01/06/1965;31/12/2014;"571,0";"0,0";1;01/02;1;"121,0292";"-2,58";"1,484";;;;;"1,0";
+67030000;2;01/06/1965;31/12/2014;"1000,0";"571,0";1;02/02;1;"240,0";"-1,98";"1,203";;;;;"1,0";

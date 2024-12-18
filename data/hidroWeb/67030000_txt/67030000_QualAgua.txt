@@ -1,0 +1,18 @@
+Agência Nacional de Águas - ANA
+Superintendência de Gestão da Rede Hidrometeorológica-SGH
+Sistema de Informações Hidrológicas - Versão WEB
+Fone: (61) 2109-5242
+E-mail: hidro@ana.gov.br
+
+NivelConsistencia: 1 = Bruto, 2 = Consistido
+PosHorizColeta: 1 = Margem direita, 2 = Centro, 3 = Margem esquerda, 4 = Composta, 5 = Extra, 6 = Indefinida, 7 = Superfície, 8 = Integrada, 9 = 40%, 10 = 50%
+PosVertColeta: 1 = Indefinida, 2 = Superficial, 3 = Integrada, 4 = Fundo, 5 = 20%, 6 = 40%, 7 = 50%, 8 = 60%, 9 = 70%, 10 = 80%
+Choveu: 0 = Não, 1 = Sim
+Status: 0 = Branco, 1 = Real, 2 = Menor que (<), 3 = Valor aceito (VA), 4 = Não detectado (ND)
+
+Restrições da consulta:
+Código da Estação:67030000
+
+
+EstacaoCodigo;NivelConsistencia;Data;Hora;NumMedicao;PosHorizColeta;PosVertColeta;Choveu;Profundidade;TempAr;TempAmostra;pH;Cor;Turbidez;CondutividadeEletrica;DurezaTotal;Dureza;DQO;DBO;OD;SolTotais;SolFixos;SolVolateis;SolSuspensaoTotais;SolSuspensaoFixos;SolSuspensaoVolateis;SolDissolvidosTotais;SolDissolvidosFixos;SolDissolvidosVolateis;SolSedimentaveis;Detergentes;AlcalinidadeCO3;AlcalinidadeHCO3;AlcalinidadeOH;Cloretos;Sulfatos;Sulfetos;Fluoretos;FosfatoTotal;Cianetos;NitrogenioTotal;AmoniaNaoIonizavel;NitrogenioAmoniacal;Nitratos;Nitritos;CompostosOrganoclorados;CompostosOrganofosforados;Aluminio;Arsenio;Cadmio;Chumbo;Cobre;CromoTrivalente;CromoHexavalente;Manganes;Mercurio;Niquel;Zinco;IndiceFenois;ColiformesTotais;ColiformesFecais;CloroResidual;Bario;Berilio;Boro;Cobalto;Estanho;Litio;Prata;Selenio;UranioTotal;Vanadio;Benzeno;BenzoAPireno;n11Dicloroeteno;n12Dicloroetano;Pentaclorofenol;Tetracloroeteno;Tricloroeteno;TetracloretoCarbono;n246Triclorofenol;Aldrin;Clordano;DDT;Dieldrin;Endrin;Endossulfan;EpoxidoHeptacloro;Heptacloro;Lindano;Metoxicloro;DodecacloroNonacloro;BifenilasPolicloradas;Toxafeno;Demeton;Gution;Malation;Paration;Carbaril;Acido24Diclorofenoxiacetico;n245TP;n245T;BHC;Ethion;DySystonDisulfton;Phosdrin;DDEPP;AzinfosEtil;Diazinon;EstreptococosFecais;Salmonelas;Colifagos;BacteriasHeterotroficas;Protozoarios;Fungos;Algas;ContagemBacteriasPlaca;Clorofila;OleosGraxas;AlcalinidadeTotal;CarbonoOrganicoTotal;Hidrocarbonetos;OrtofosfatoTotal;CromoTotal;MetilParation;NitrogenioOrganico;SodioTotal;MagnesioTotal;SilicaDissolvida;PotassioTotal;CalcioTotal;FerroTotal;DescargaLiquida;FosforoTotal;BismutoTotal;Acidez;NitrogenioTotalKJELDAHL;NitrogenioAlbuminoide;Transparencia;EnteroBacteriasPatogenicas;ZooplanctonTotal;Amoniaco;IQA;ColiformesTermotolerantes;Escherichia;Aluminiodissolvido;Borodissolvido;Cianetolivre;Cobredissolvido;CondutividadeEspecifica;Densidadecianobacterias;Durezamagnesio;FerroDissolvido;FitoplanctonQuantitativo;ODsaturacao;ParametroProfundidade;QualAguaStatus do 1 ao 147
+67030000;1;31/03/2007;11:30;;;;0;;"38,8";"30,9";"6,48";;;"66,0";;;;;"0,77";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;"'1;1;1;;;1;;;;;1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;"

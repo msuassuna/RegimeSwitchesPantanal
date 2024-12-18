@@ -1,0 +1,22 @@
+Agência Nacional de Águas - ANA
+Superintendência de Gestão da Rede Hidrometeorológica-SGH
+Sistema de Informações Hidrológicas - Versão WEB
+Fone: (61) 2109-5242
+E-mail: hidro@ana.gov.br
+
+NivelConsistencia: 1 = Bruto, 2 = Consistido
+TipoCurva: 1 = Equação, 2 = Tabela
+TipoEquacao: 1 = Potência (Q(H) = a(H - h0)^n), 2 = Linear (Q(H) = a0 + a1H), 3 = Parabólica (Q(H) = a0 + a1H + a2H^2), 4 = Cúbica (Q(H) = a0 + a1H + a2H^2 + a3H^3)
+
+Restrições da consulta:
+Código da Estação:66970000
+
+
+EstacaoCodigo;NivelConsistencia;PeriodoValidadeInicio;PeriodoValidadeFim;CotaMaxima;CotaMinima;TipoCurva;NumeroCurva;TipoEquacao;CoefA;CoefH0;CoefN;CoefA0;CoefA1;CoefA2;CoefA3;TabelaPassoCota;TabelaVazao
+66970000;2;01/01/1969;15/03/1974;"-111,0";"-200,0";1;01/04;1;"123,8";"-4,48";"1,611";;;;;"1,0";
+66970000;2;01/01/1969;15/03/1974;"-49,0";"-111,0";1;02/04;1;"83,9";"-5,42";"1,606";;;;;"1,0";
+66970000;2;01/01/1969;15/03/1974;"344,0";"-49,0";1;03/04;1;"61,2";"-6,53";"1,6";;;;;"1,0";
+66970000;2;01/01/1969;15/03/1974;"350,0";"344,0";1;04/04;1;"156,3891";"-2,11";"1,6";;;;;"1,0";
+66970000;2;16/03/1974;30/11/1981;"297,0";"-65,0";1;01/03;1;"29,5692";"-7,72";"1,8";;;;;"1,0";
+66970000;2;16/03/1974;30/11/1981;"421,0";"297,0";1;02/03;1;"156,3891";"-2,11";"1,6";;;;;"1,0";
+66970000;2;16/03/1974;30/11/1981;"550,0";"421,0";1;03/03;1;"193,6998";"-0,55";"1,754";;;;;"1,0";
