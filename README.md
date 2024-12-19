@@ -36,33 +36,33 @@ The following R packages are required to run the analysis:
 To install these dependencies, run the following code in R:  
 ```r  
 install.packages(c("depmixS4", "nnet", "ggplot2", "dplyr", "tidyr", "terra"))  
+```
 
 
+# How to Reproduce the Results
 
-How to Reproduce the Results
-Clone the repository:
+1. Clone the repository:
 
+```r  
 bash
-Copiar código
 git clone https://github.com/msuassuna/RegimeSwitchesPantanal.git  
-Set up the environment:
+```
 
-Open the R project file RegimeSwitchesPantanal.Rproj in RStudio.
-Ensure all required packages are installed.
-Run the Main Script:
-Execute MainScript.R to reproduce the analyses and generate the outputs.
+2. Set up the environment:
 
-Outputs
-Figures: Generated plots for transition matrices, drought class analysis, and teleconnection patterns.
-Tables: Outputs summarizing model parameters, probabilities, and statistical summaries.
-License
-This repository is licensed under the MIT License.
+- Open the R project file RegimeSwitchesPantanal.Rproj in RStudio
+- Ensure all required packages are installed
 
-Contact
+3. Run the Main Script:
+- Execute MainScript.R step-by-step to reproduce the analyses and generate the outputs
+
+# Outputs
+- Figures: Generated plots for transition matrices, drought class analysis, and teleconnection patterns.
+- Tables: Outputs summarizing model parameters, probabilities, and statistical summaries.
+
+# Contact
 For questions, feedback, or collaboration opportunities, please contact:
 Marcus Suassuna
 
-Email: example@email.com
+Email: marcus.santos@sgb.gov.br / msuassuna@gmail.com
 GitHub: github.com/msuassuna
-javascript
-Copiar código
