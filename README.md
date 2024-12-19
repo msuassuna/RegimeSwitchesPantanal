@@ -22,6 +22,11 @@ The repository is structured to foster **transparency** and **reproducibility** 
 - `RegimeSwitchesPantanal.Rproj`: R project file for setting up the working environment.  
 - `66825000.csv` & `67100000.csv`: Example datasets used for stream gauge analysis.  
 
+### Notes on Data Availability
+
+The land use data utilized in this study are not included in this repository due to file size constraints. However, these data are available from Dias et al. (2016), which provides detailed land cover and land use classification for the study area. The dataset can be accessed at http://www.biosfera.dea.ufv.br/pt-BR/banco/uso-do-solo-agricola-no-brasil-1940-2012---dias-et-al-2016.
+
+If you encounter any difficulties accessing these files or have questions about their use, please feel free to contact me for assistance.
 ---
 
 ## Dependencies  
@@ -35,11 +40,17 @@ The following R packages are required to run the analysis:
 
 To install these dependencies, run the following code in R:  
 ```r  
-install.packages(c("depmixS4", "nnet", "ggplot2", "dplyr", "tidyr", "terra"))  
+install.packages(c(
+  "tidyverse", "gridExtra", "lubridate", "ForestFit", "caret", "nnet",
+  "randomForest", "kernlab", "MASS", "cowplot", "markovchain", "e1071", 
+  "rpart", "rpart.plot", "dismo", "mlbench", "gbm", "xgboost", 
+  "varSelRF", "Gmisc", "pdp", "depmixS4", "plyr", "ggpubr", 
+  "diagram", "zoo", "ggdist", "tidyquant"
+))
 ```
 
 
-# How to Reproduce the Results
+## How to Reproduce the Results
 
 1. Clone the repository:
 
@@ -56,13 +67,14 @@ git clone https://github.com/msuassuna/RegimeSwitchesPantanal.git
 3. Run the Main Script:
 - Execute MainScript.R step-by-step to reproduce the analyses and generate the outputs
 
-# Outputs
+## Outputs
 - Figures: Generated plots for transition matrices, drought class analysis, and teleconnection patterns.
 - Tables: Outputs summarizing model parameters, probabilities, and statistical summaries.
 
-# Contact
+## Contact
 For questions, feedback, or collaboration opportunities, please contact:
 Marcus Suassuna
 
 Email: marcus.santos@sgb.gov.br / msuassuna@gmail.com
+
 GitHub: github.com/msuassuna
